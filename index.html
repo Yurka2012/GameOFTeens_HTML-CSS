@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neochool</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+          <div class="navbar-logo">
+            <button class="none">
+              <img src="./burger.png" alt="Burger Menu" width="30px">
+            </button>
+          </div>
+          <input type="checkbox" id="navbar-toggle" class="navbar-toggle none">
+          <label for="navbar-toggle" class="navbar-toggle-label none">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+          <ul class="navbar-menu" id="navbarMenu">
+            <li><a href="#section1">Про нас</a></li>
+            <li><a href="#section2">Програма навчання</a></li>
+            <li><a href="#section3">Умови зарахування</a></li>
+            <li><a href="#section4">Формат навчання</a></li>
+            <li><a href="#section5">Переваги</a></li>
+          </ul>
+        </nav>
+      </header>
+      
+<style>      
+/* Стилі для телефона та планшета */
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+
+.navbar-toggle-label {
+  display: inline-block;
+  width: 30px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+  opacity: 0; /* Приховуємо кнопку бургер-меню */
+  pointer-events: none; /* Вимикаємо можливість клікати на кнопку */
+}
+
+.navbar-toggle-label span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #000;
+  position: absolute;
+  left: 0;
+  transition: transform 0.3s ease;
+}
+
+.navbar-toggle-label span:nth-child(1) {
+  top: 0;
+}
+
+.navbar-toggle-label span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.navbar-toggle-label span:nth-child(3) {
+  bottom: 0;
+}
+
+.navbar-toggle:checked + .navbar-toggle-label span:nth-child(1),
+.navbar-toggle:checked + .navbar-toggle-label span:nth-child(3) {
+  transform: translateY(50%) rotate(45deg);
+}
+
+.navbar-toggle:checked + .navbar-toggle-label span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-menu {
+  display: none;
+}
+
+.navbar-toggle:checked ~ #navbarMenu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  left: 20px;
+  background-color: #000000;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-menu li {
+  margin: 10px 0;
+}
+
+/* Оптимізовані стилі для комп'ютера та планшета */
+@media (min-width: 768px) {
+  .navbar {
+    background-color: transparent;
+    padding: 20px 40px;
+  }
+
+  .navbar-toggle-label {
+    display: none;
+  }
+
+  .navbar-menu {
+    display: flex;
+    list-style: none;
+  }
+
+  .navbar-menu li {
+    margin-right: 20px;
+  }
+
+  .navbar-menu a, p {
+    color: #ffffff; /* Колір тексту - чорний */
+  }
+  .none{
+    display: none;
+  }
+}
+header{
+    position: fixed;
+    z-index: 9999;
+}
+
+</style>      
+    
+
+    <main>
+        <section class="section1">
+            <h3 style="text-align: end;">чим ми займаємося?</h3> <br/><br> <br>
+            <ul style="display: flex;">
+                <li>
+                    <img src="https://picsum.photos/100/100" alt="">
+                    <p>ми допомагаємо дітям та дорослим зрозуміти всю цю атмосферу айті</p>
+                </li>
+                <li>
+                    <img src="https://picsum.photos/100/100" alt="">
+                    <p>Ми завжди на звʼязку з нашими учнями</p>
+                </li>
+                <li>
+                    <img src="https://picsum.photos/100/100" alt="">
+                    <p>Ми надаємо індивідуальний підхід до кожного учня</p>
+                </li>
+                
+                </li>
+            </ul>
+        </section>
+        <!-- -->
+        <section class="section2">
+            <div class="container">
+                <h2>Наша IT-програма навчання</h2>
+                <ul>
+                    <li>
+                        <h3>Вивчення програмування</h3>
+                        <p>Навчання основам програмування, включаючи мови програмування, структури даних та алгоритми.</p>
+                    </li>
+                    <li>
+                        <h3>Веб-розробка</h3>
+                        <p>Розширене вивчення веб-технологій, таких як HTML, CSS, JavaScript та фреймворки.</p>
+                    </li>
+                    <li>
+                        <h3>Бази даних</h3>
+                        <p>Основи роботи з базами даних, включаючи SQL-запити, нормалізацію та проектування баз даних.</p>
+                    </li>
+                    <li>
+                        <h3>Розробка мобільних додатків</h3>
+                        <p>Навчання розробці мобільних додатків для платформ Android та iOS з використанням Java, Kotlin або Swift.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        
+        
+        <!--  -->
+        <section class="section3">
+            <div class="container">
+                <h2>Умови зарахування</h2>
+                <p>Для вступу до школи NeoSchool необхідно відповідати наступним умовам:</p>
+                <ul>
+                    <li>Вік учня: від 12 до 18 років.</li>
+                    <li>Бажання розвиватись в сфері ІТ та комп'ютерних наук.</li>
+                    <li>Базові знання з програмування не є обов'язковими, але будуть перевагою.</li>
+                    <li>Заповнити анкету для вступу та пройти співбесіду з представниками школи.</li>
+                </ul>
+                <p>Якщо ви відповідаєте цим умовам, ми з нетерпінням чекаємо вас в нашій школі!</p>
+            </div>
+        </section>
+        
+        <!--  -->
+        <section class="section4" style="height: auto;">
+            <h2>Формат навчання</h2>
+            <p>У нашій школі ми пропонуємо різні формати навчання, які відповідають потребам учнів. Незалежно від вашого рівня підготовки та цілей, ви знайдете відповідну програму.</p>
+            <ul>
+              <li>Групові заняття: Ми проводимо заняття в невеликих групах, що дозволяє створити сприятливу атмосферу для навчання та спілкування.</li>
+              <li>Індивідуальні заняття: Для тих, хто бажає більше уваги та гнучкості, ми пропонуємо індивідуальні заняття з викладачем.</li>
+              <li>Онлайн навчання: Ми також надаємо можливість навчатися в онлайн-форматі, де ви можете отримати знання зручно із будь-якої локації.</li>
+            </ul>
+          </section>
+          <style>
+            .section4 {
+  background-color: #f5f5f5;
+  padding: 50px;
+  text-align: center;
+}
+
+.section4 h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.section4 p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.section4 ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section4 li {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.section4 li::before {
+  content: '\2022';
+  color: #333;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+@media screen and (min-width: 768px) {
+  .section4 {
+    text-align: left;
+  }
+  
+  .section4 ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .section4 li {
+    margin: 0 15px;
+  }
+}
+
+          </style>
+        <!--  -->
+        <section class="section5">
+            <h2>Реєстрація</h2>
+            <button class="register-button">Реєстрація</button>
+            <div class="registration-dialog">
+              <h3>Форма реєстрації</h3>
+              <!-- Додаткові поля для реєстрації -->
+              <input type="text" placeholder="Ім'я">
+              <input type="email" placeholder="Електронна пошта">
+              <input type="password" placeholder="Пароль">
+              <button class="submit-button">Зареєструватися</button>
+            </div>
+          </section>
+
+          <style>
+            .section5 {
+  background-color: #f0f0f0;
+  padding: 50px;
+  text-align: center;
+}
+
+.section5 h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.register-button {
+  background-color: #007bff;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.registration-dialog {
+  display: none;
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.registration-dialog h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.registration-dialog input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.submit-button {
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Показувати діалогове вікно при кліку на кнопку "Реєстрація" */
+.register-button:focus + .registration-dialog {
+  display: block;
+}
+
+          </style>
+        <!--  -->
+    </main>
+    <footer></footer>
+</body>
+</html>
